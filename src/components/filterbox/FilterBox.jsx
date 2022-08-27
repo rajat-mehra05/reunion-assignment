@@ -12,7 +12,6 @@ import {
   filterPropertyType,
   filterSearchedData,
 } from "../../utils/filterData";
-import Button from "../button/Button";
 
 import "./filterBoxStyles.css";
 
@@ -48,11 +47,12 @@ const FilterBox = ({ searchQuery, setPropertyInfo }) => {
         <div className="filters-section">
           <label htmlFor="location"> Location </label>
           <select
+            defaultValue={"DEFAULT"}
             name="location"
             id="location"
             onChange={(e) => dispatch(getLocation(e.target.value))}
           >
-            <option value="none" selected disabled hidden>
+            <option value="DEFAULT" selected disabled hidden>
               Select an Option
             </option>
             <option value="New York">New York</option>
@@ -75,11 +75,12 @@ const FilterBox = ({ searchQuery, setPropertyInfo }) => {
         <div className="filters-section">
           <label htmlFor="priceRange"> Price Range </label>
           <select
+            defaultValue={"DEFAULT"}
             name="priceRange"
             id="priceRange"
             onChange={(e) => dispatch(getPriceRange(e.target.value))}
           >
-            <option value="none" selected disabled hidden>
+            <option value="DEFAULT" disabled hidden>
               Select Price
             </option>
             <option value="10000-20000">1k-3k</option>
@@ -92,11 +93,12 @@ const FilterBox = ({ searchQuery, setPropertyInfo }) => {
         <div className="filters-section">
           <label htmlFor=""> Property Type </label>
           <select
+            defaultValue={"DEFAULT"}
             name="priceRange"
             id="priceRange"
             onChange={(e) => dispatch(getPropertyType(e.target.value))}
           >
-            <option value="none" selected disabled hidden>
+            <option value="DEFAULT" disabled hidden>
               Select property
             </option>
             <option value="Flat">Flat</option>
@@ -105,12 +107,12 @@ const FilterBox = ({ searchQuery, setPropertyInfo }) => {
           </select>
         </div>
         <div className="right-border"></div>
-        <Button
+        <button
           className="search-btn"
           onClick={() => setFilterData(data.propertyData)}
         >
           Search
-        </Button>
+        </button>
       </div>
     </>
   );

@@ -25,7 +25,7 @@ function App() {
           setPropertyInfo={setPropertyInfo}
         />
         <div className="cards-wrapper">
-          {propertyInfo.map((item) => (
+          {propertyInfo?.map((item) => (
             <Card key={item.id} content={item} />
           ))}
         </div>

@@ -1,6 +1,6 @@
 export const filterLocation = (data, query) => {
   if (!query) return data;
-  else data.filter((item) => item.location === query);
+  return data.filter((item) => item.location === query);
 };
 
 export const filterPriceRange = (data, query) => {
