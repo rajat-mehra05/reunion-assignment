@@ -97,3 +97,9 @@ body {
   gap: 1.5rem;
   margin-top: 2rem;
 }
+
+.cards-no-item {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
