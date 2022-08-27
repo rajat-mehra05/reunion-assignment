@@ -2,11 +2,13 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import data from "../../fakeData/data.json";
 import {
+  getDateInput,
   getLocation,
   getPriceRange,
   getPropertyType,
 } from "../../features/filterSlice";
 import {
+  filterDate,
   filterLocation,
   filterPriceRange,
   filterPropertyType,
@@ -18,7 +20,7 @@ import "./filterBoxStyles.css";
 const FilterBox = ({ searchQuery, setPropertyInfo }) => {
   const dispatch = useDispatch();
 
-  const { location, propertyType, priceRange } = useSelector(
+  const { location, propertyType, priceRange, dateInput } = useSelector(
     (state) => state.filters
   );
 
@@ -29,10 +31,14 @@ const FilterBox = ({ searchQuery, setPropertyInfo }) => {
     );
 
     const locationFilteredData = filterLocation(filteredSearchedData, location);
+
+    const filterDateData = filterDate(locationFilteredData, dateInput);
+
     const propertyFilteredData = filterPropertyType(
-      locationFilteredData,
+      filterDateData,
       propertyType
     );
+
     const priceFilteredData = filterPriceRange(
       propertyFilteredData,
       priceRange
@@ -68,7 +74,7 @@ const FilterBox = ({ searchQuery, setPropertyInfo }) => {
             type="date"
             name="date"
             id="date"
-            placeholder="Select Move-in Date"
+            onChange={(e) => dispatch(getDateInput(e.target.value))}
           />
         </div>
         <div className="right-border"></div>
@@ -83,10 +89,9 @@ const FilterBox = ({ searchQuery, setPropertyInfo }) => {
             <option value="DEFAULT" disabled hidden>
               Select Price
             </option>
-            <option value="10000-20000">1k-3k</option>
-            <option value="20000-30000">3k-5k</option>
-            <option value="30000-40000">5k-7k</option>
-            <option value="40000-50000">7k-30k</option>
+            <option value="1000-3000">1k-3k</option>
+            <option value="3001-5000">3k-5k</option>
+            <option value="5001-7000">5k-7k</option>
           </select>
         </div>
         <div className="right-border"></div>

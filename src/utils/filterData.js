@@ -3,6 +3,13 @@ export const filterLocation = (data, query) => {
   return data.filter((item) => item.location === query);
 };
 
+export const filterDate = (data, query) => {
+  if (!query) return data;
+
+  return data.filter((item) => new Date(item.moveInDate) - new Date() > 0);
+  // show the properties available after the entered date
+};
+
 export const filterPriceRange = (data, query) => {
   if (query.min === 0 && query.max === 0) return data;
 

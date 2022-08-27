@@ -27,7 +27,7 @@ const Card = ({ content }) => {
         <div className="card-body">
           <div className="card-header">
             <div className="card-price">
-              <h1> {content.price} </h1>
+              <h1> $ {content.price} </h1>
               <span className="month">/month </span>
             </div>
             <div className="fav-icon">
