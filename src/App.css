@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
 *::before,
 *::after {
   box-sizing: border-box;
@@ -8,11 +10,15 @@
 
 :root {
   --buttonTextColor: #fff;
-  --buttonBgColor: #a66cff;
+  --buttonBgColor: #9865e4;
   --heroColor: #6930be;
-  --mainBgColor: #e0e0e0;
-  --navBgColor: #feffff;
+  --mainBgColor: rgb(244, 247, 247);
+  --navBgColor: rgb(244, 247, 244);
   --heroTextColor: #1a1620;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
 }
 
 .nav-container {
@@ -28,6 +34,7 @@
 .left-nav {
   display: flex;
   align-items: center;
+  gap: 8rem;
 }
 
 .hero-container {
@@ -45,17 +52,6 @@
   color: var(--heroTextColor);
   font-weight: 600;
   font-size: 1.2rem;
-}
-
-.links-container {
-  width: auto;
-}
-
-.lists {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  font-weight: medium;
 }
 
 .btn-container {
@@ -77,7 +73,7 @@
 .signup-btn {
   color: white;
   font-weight: 500;
-  background-color: var(--heroColor);
+  background-color: var(--buttonBgColor);
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -91,11 +87,13 @@
   display: flex;
   flex-direction: column;
   padding: 40px 90px 10px 90px;
+  background-color: var(--mainBgColor);
 }
 
-/* search container */
-.search-container {
+/* cards wrapper */
+.cards-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
 }

@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-container {
+  width: 370px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+.card-pic {
+  width: inherit;
+  object-fit: cover;
+  position: relative;
+}
+
+.card-pic > img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 87%;
+  left: -14px;
+  color: white;
+  background-color: rgb(89, 86, 226);
+  padding: 0.5rem 1rem;
+  border-radius: 8px 8px 8px 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.popular-badge-foot {
+  position: absolute;
+  top: 96%;
+  left: -7.6px;
+  width: 0;
+  height: 0;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-right: 11px solid rgb(89, 86, 226);
+  transform: rotate(137deg);
+}
+
+.card-body {
+  padding: 5px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 6px;
+  align-items: center;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+}
+
+.card-price h1 {
+  color: blueviolet;
+}
+
+.card-price span {
+  color: #929b98;
+}
+
+.fav-icon {
+  border-radius: 50%;
+  border: 1px solid #d5d8d7;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.heart-outline {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.card-address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-bottom: 1px solid #d5d8d7;
+  padding: 0px 0px 16px 0px;
+}
+
+.card-address h4 {
+  color: gray;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.room-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.room-details .icon {
+  color: blueviolet;
+}
+
+.room-details span {
+  color: #929b98;
+}

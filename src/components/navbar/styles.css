@@ -1,0 +1,22 @@
+.links-container {
+  width: auto;
+}
+
+.lists {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  font-weight: medium;
+}
+
+.lists .active {
+  color: blueviolet;
+  background: #e8ecfd;
+  padding: 0.5rem 1rem;
+}
+
+.lists li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

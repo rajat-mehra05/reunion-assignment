@@ -1,0 +1,14 @@
+/* search container */
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 10px 5px;
+  border: 1px solid gainsboro;
+  outline: none;
+  border-radius: 5px;
+  font-size: medium;
+}
