@@ -11,7 +11,7 @@ const Card = ({ content }) => {
     <div>
       <div className="card-container">
         <div className="card-pic">
-          <img src={content.image} alt={content.name} />
+          <img src={content.image} alt={content.name} loading="lazy" />
           {content.popular ? (
             <>
               <div className="popular-badge">

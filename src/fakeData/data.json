@@ -23,7 +23,7 @@
       "streetAddress": "Lake Selvia",
       "price": "$2,095",
       "image": "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXBhcnRtZW50c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-      "property-type": "Flat",
+      "property-type": "Industrial",
       "move-in-date": "08-09-2023",
       "roomDetails": {
         "bed": "5",
@@ -56,7 +56,7 @@
       "streetAddress": "979 Avenue",
       "price": "$4,095",
       "image": "https://images.unsplash.com/photo-1576647296530-fa0e45d8ff8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGFwYXJ0bWVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-      "property-type": "Flat",
+      "property-type": "Villa",
       "move-in-date": "1-12-2022",
       "roomDetails": {
         "bed": "1",
@@ -67,12 +67,12 @@
     },
     {
       "id": "5",
-      "name": "Allora Caves",
+      "name": "Ajanta Street Park",
       "location": "Mumbai",
-      "streetAddress": "979 Avenue",
+      "streetAddress": "9th Avenue",
       "price": "$4,095",
       "image": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&client=gme-movesalesinc&size=640x480&location=19360+Murray+Hill+St%2CDetroit%2CMI%2C48235&signature=KDmlbkncYjq4jvYNDHe7PdHXRf4",
-      "property-type": "Flat",
+      "property-type": "Villa",
       "move-in-date": "2-01-2023",
       "roomDetails": {
         "bed": "4",
@@ -88,7 +88,7 @@
       "streetAddress": "979 Avenue",
       "price": "$10,095",
       "image": "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXBhcnRtZW50c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-      "property-type": "Flat",
+      "property-type": "Industrial",
       "move-in-date": "2-01-2023",
       "roomDetails": {
         "bed": "8",
@@ -100,7 +100,7 @@
     {
       "id": "7",
       "name": "Cruise House",
-      "location": "Chicago",
+      "location": "New York",
       "streetAddress": "2379 Avenue",
       "price": "$7,095",
       "image": "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXBhcnRtZW50c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
@@ -116,11 +116,11 @@
     {
       "id": "8",
       "name": "House DumbleDore",
-      "location": "London",
+      "location": "Tokyo",
       "streetAddress": "79 Park Street",
       "price": "$15,095",
       "image": "https://images.unsplash.com/photo-1576647296530-fa0e45d8ff8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGFwYXJ0bWVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-      "property-type": "Flat",
+      "property-type": "Villa",
       "move-in-date": "12-02-2023",
       "roomDetails": {
         "bed": "2",
@@ -136,7 +136,7 @@
       "streetAddress": "29 Street",
       "price": "$25,095",
       "image": "https://images.unsplash.com/photo-1576647296530-fa0e45d8ff8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGFwYXJ0bWVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-      "property-type": "Flat",
+      "property-type": "Industrial",
       "move-in-date": "12-02-2023",
       "roomDetails": {
         "bed": "4",

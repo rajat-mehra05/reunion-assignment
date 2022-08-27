@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.filter-container {
+  background: #fff;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px 10px;
+}
+
+.filters-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.right-border {
+  position: relative;
+  width: 1px;
+  height: 70px;
+  border: 1px solid gainsboro;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.filters-section > label {
+  color: rgb(187, 182, 182);
+}
+
+.filters-section > input,
+.filters-section > select {
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.search-btn {
+  color: white;
+  font-weight: 500;
+  background-color: var(--buttonBgColor);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: rgb(98, 44, 109);
+}
