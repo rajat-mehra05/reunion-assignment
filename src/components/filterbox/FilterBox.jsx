@@ -1,14 +1,57 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import data from "../../fakeData/data.json";
+import {
+  getLocation,
+  getPriceRange,
+  getPropertyType,
+} from "../../features/filterSlice";
+import {
+  filterLocation,
+  filterPriceRange,
+  filterPropertyType,
+  filterSearchedData,
+} from "../../utils/filterData";
 import Button from "../button/Button";
+
 import "./filterBoxStyles.css";
 
-const FilterBox = () => {
+const FilterBox = ({ searchQuery, setPropertyInfo }) => {
+  const dispatch = useDispatch();
+
+  const { location, propertyType, priceRange } = useSelector(
+    (state) => state.filters
+  );
+
+  function setFilterData() {
+    const filteredSearchedData = filterSearchedData(
+      data.propertyData,
+      searchQuery
+    );
+
+    const locationFilteredData = filterLocation(filteredSearchedData, location);
+    const propertyFilteredData = filterPropertyType(
+      locationFilteredData,
+      propertyType
+    );
+    const priceFilteredData = filterPriceRange(
+      propertyFilteredData,
+      priceRange
+    );
+
+    setPropertyInfo(priceFilteredData);
+  }
+
   return (
     <>
       <div className="filter-container">
         <div className="filters-section">
           <label htmlFor="location"> Location </label>
-          <select name="location" id="location">
+          <select
+            name="location"
+            id="location"
+            onChange={(e) => dispatch(getLocation(e.target.value))}
+          >
             <option value="none" selected disabled hidden>
               Select an Option
             </option>
@@ -31,7 +74,11 @@ const FilterBox = () => {
         <div className="right-border"></div>
         <div className="filters-section">
           <label htmlFor="priceRange"> Price Range </label>
-          <select name="priceRange" id="priceRange">
+          <select
+            name="priceRange"
+            id="priceRange"
+            onChange={(e) => dispatch(getPriceRange(e.target.value))}
+          >
             <option value="none" selected disabled hidden>
               Select Price
             </option>
@@ -44,7 +91,11 @@ const FilterBox = () => {
         <div className="right-border"></div>
         <div className="filters-section">
           <label htmlFor=""> Property Type </label>
-          <select name="priceRange" id="priceRange">
+          <select
+            name="priceRange"
+            id="priceRange"
+            onChange={(e) => dispatch(getPropertyType(e.target.value))}
+          >
             <option value="none" selected disabled hidden>
               Select property
             </option>
@@ -54,7 +105,12 @@ const FilterBox = () => {
           </select>
         </div>
         <div className="right-border"></div>
-        <Button className="search-btn"> Search </Button>
+        <Button
+          className="search-btn"
+          onClick={() => setFilterData(data.propertyData)}
+        >
+          Search
+        </Button>
       </div>
     </>
   );
