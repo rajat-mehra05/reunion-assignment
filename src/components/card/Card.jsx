@@ -16,7 +16,7 @@ const Card = ({ content }) => {
   const { myFavs } = useSelector((state) => state.favorites);
 
   function isFavorite(id) {
-    myFavs.find((item) => item.id === id);
+    return myFavs.find((item) => item.id === id);
   }
 
   return (
@@ -45,11 +45,11 @@ const Card = ({ content }) => {
 
             {isFavorite(content.id) ? (
               <div onClick={() => dispatch(removeMyFavsHandler(content.id))}>
-                <AiOutlineHeart />
+                <AiFillHeart />
               </div>
             ) : (
               <div onClick={() => dispatch(addMyFavsHandler(content))}>
-                <AiFillHeart />
+                <AiOutlineHeart />
               </div>
             )}
           </div>
