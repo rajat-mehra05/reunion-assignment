@@ -41,6 +41,7 @@ body {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .hero-icon {
@@ -108,15 +109,19 @@ body {
 
 .empty-fav-section {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 50vh;
+  flex-direction: column;
   gap: 1rem;
+  margin-top: 4rem;
 }
 
-.fav-section {
+.empty-fav-section button {
+  width: 7rem;
+}
+
+.fav-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 10px 25px;
 }

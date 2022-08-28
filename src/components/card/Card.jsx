@@ -44,18 +44,12 @@ const Card = ({ content }) => {
             </div>
 
             {isFavorite(content.id) ? (
-              <div
-                // className="fav-icon filled"
-                onClick={() => dispatch(removeMyFavsHandler(content.id))}
-              >
-                <AiFillHeart />
+              <div onClick={() => dispatch(removeMyFavsHandler(content.id))}>
+                <AiOutlineHeart />
               </div>
             ) : (
-              <div
-                // className="fav-icon"
-                onClick={() => dispatch(addMyFavsHandler(content))}
-              >
-                <AiOutlineHeart />
+              <div onClick={() => dispatch(addMyFavsHandler(content))}>
+                <AiFillHeart />
               </div>
             )}
           </div>

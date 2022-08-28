@@ -14,8 +14,7 @@ const Favourites = () => {
           <section className="empty-fav-section">
             <h1> You haven't marked your items as favorites yet! </h1>
             <button className="signup-btn" onClick={() => navigate("/")}>
-              {" "}
-              Go back{" "}
+              Go back
             </button>
           </section>
         ) : (
