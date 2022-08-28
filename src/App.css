@@ -103,3 +103,20 @@ body {
   padding: 10px;
   width: 100%;
 }
+
+/* favorites  */
+
+.empty-fav-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  gap: 1rem;
+}
+
+.fav-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

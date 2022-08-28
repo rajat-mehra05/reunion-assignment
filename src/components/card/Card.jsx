@@ -42,19 +42,20 @@ const Card = ({ content }) => {
               <h1> $ {content.price} </h1>
               <span className="month">/month </span>
             </div>
+
             {isFavorite(content.id) ? (
-              <div className="fav-icon">
-                <AiFillHeart
-                  className="heart-outline"
-                  onClick={() => dispatch(removeMyFavsHandler(content.id))}
-                />
+              <div
+                // className="fav-icon filled"
+                onClick={() => dispatch(removeMyFavsHandler(content.id))}
+              >
+                <AiFillHeart />
               </div>
             ) : (
-              <div className="fav-icon">
-                <AiOutlineHeart
-                  onClick={() => dispatch(addMyFavsHandler(content))}
-                  className="heart-outline"
-                />
+              <div
+                // className="fav-icon"
+                onClick={() => dispatch(addMyFavsHandler(content))}
+              >
+                <AiOutlineHeart />
               </div>
             )}
           </div>

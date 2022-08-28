@@ -81,11 +81,8 @@
   cursor: pointer;
 }
 
-.heart-outline {
-  display: flex;
-  align-items: center;
-  width: 20px;
-  height: 20px;
+.filled {
+  background-color: red !important;
 }
 
 .card-address {
